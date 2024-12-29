@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Neural Head Avatars from Monocular RGB Videos</title>
+        <title></title>
         <link rel="stylesheet" href="../w3.css">
         <link rel="stylesheet"
               href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -18,20 +18,22 @@
                 <h2 align="center" id="title"><b>Enhanced Self-Supervised Multi-View Representations With Modality-Missing Robustness for Audio-Visual Speech Recognition</b></h2>
                 <br/>
 
+                <!-- <p align="center" class="center_text" id="authors">
+                    <a target="_blank" href="https://hci.iwr.uni-heidelberg.de/vislearn/people"></a><sup>1</sup>
+                    &nbsp;&nbsp;
+                    <a target="_blank" href="https://de.linkedin.com/in/malte-prinzler"></a><sup>2</sup>
+                    &nbsp;&nbsp;
+                    <a target="_blank" href="https://titus-leistner.de/pages/about-me.html"</a><sup>3</sup>
+                    &nbsp;&nbsp;
+                </p> -->
                 <p align="center" class="center_text" id="authors">
-                    <a target="_blank" href="https://hci.iwr.uni-heidelberg.de/vislearn/people">Fei Su</a><sup>1</sup>
-                    &nbsp;&nbsp;
-                    <a target="_blank" href="https://de.linkedin.com/in/malte-prinzler">Cancan Li</a><sup>2</sup>
-                    &nbsp;&nbsp;
-                    <a target="_blank" href="https://titus-leistner.de/pages/about-me.html">Juan Liu</a><sup>3</sup>
-                    &nbsp;&nbsp;
+                    <span>Anonymous submission</span>
                 </p>
 
-                <p class="center_text" align="center">
-                    School of Computer Science 
-                    Wuhan University      
+                <!-- <p class="center_text" align="center">
+                    ///     
                     
-                </p>
+                </p> -->
 
                 <br>
 
@@ -41,27 +43,25 @@
                 <br>
 
                 <p align="center">
-                    <a href="https://arxiv.org/pdf/2112.01554" target="__blank" class="btn btn-light">Paper</a>
-                    <a href="https://github.com/philgras/neural-head-avatars" target="__blank" class="btn btn-dark">Code</a>
+                    <a href="https://arxiv.org/" target="__blank" class="btn btn-light">Paper</a>
+                    <a href="https://github.com/yakumostudio/MVL-UMA" target="__blank" class="btn btn-dark">Code</a>
                 </p>
                 <br>
 
                 <h3 class="w3-left-align" id="intro"><b>Introduction</b></h3>
                 <p class="w3-justify">
                     Audio-Visual Speech Recognition (AVSR) leverages visual
-                    information to enhance speech understanding in noisy en-
+                    information to enhance speech understanding in noisy en
                     vironments. However, current models often assume stable,
                     frontal viewpoints, suffering significant performance drops
                     with non-frontal angles or when video signals are partially
-                    missing. 1Our approach first employs a multi-view data gen-
-                    eration strategy using 3D head avatar reconstruction, syn-
-                    thesizing high-fidelity, viewpoint-diverse data to improve the
-                    model’s ability to handle varying head poses. Then, we in-
+                    missing. Our approach first employs a multi-view data generation strategy using 3D head avatar reconstruction, synthesizing high-fidelity, viewpoint-diverse data to improve the
+                    model’s ability to handle varying head poses. Then, we in
                     troduce a self-supervised multi-view representation learning
                     model (MVL) , ensuring viewpoint-invariant and domain-
                     agnostic embeddings. Moreover, a Unified Modality Adapter
-                    (UMA) module enables the model to gracefully revert to near
-                    audio-only performance levels when visual inputs are unavail-
+                    (UMA) model enables the model to gracefully revert to near
+                    audio-only performance levels when visual inputs are unavail
                     able, maintaining the benefits of audio-visual modeling. 
                 </p>
                 <br>
@@ -72,25 +72,63 @@
                     <a href="https://arxiv.org/pdf/ " target="__blank"><img src="preview.png" style="max-width:80%" /></a>
                 </center><br> -->
 
-                <h3 class="w3-left-align" id="video"><b>Video</b></h3>
-                <p>
-                    <iframe width="850" height="480" src="speaker01.mp4" frameborder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <!-- <iframe width="850" height="480" src="https://www.youtube.com/" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
-                <p/>
-                <h3 class="w3-left-align" id="cite"><b>Cite</b></h3>
-                <pre class="w3-panel w3-leftbar w3-light-grey" style="white-space: pre-wrap; font-family: monospace; font-size: 12px">
-                
+                <h3 class="w3-left-align" id="video"><b>Videos</b></h3>
+                <div class="video-container">
+                    <!-- Row 1: Speaker 01 -->
+                    <div style="display: flex; justify-content: space-around; margin-bottom: 20px;">
+                        <div style="text-align: center;">
+                            <iframe src="speaker01_a0_e0.mp4" frameborder="0" style="width: 300px; height: 300px;"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <br>
+                            <span>speaker01 (raw video)</span>
+                        </div>
+                        <div style="text-align: center;">
+                            <iframe src="speaker01_a0_e-15.mp4" frameborder="0" style="width: 300px; height: 300px;"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <br>
+                            <span>speaker01 (yaw: 0&#176;, pitch: -15&#176;)</span>
+                        </div>
+                        <div style="text-align: center;">
+                            <iframe src="speaker01_a5_e15.mp4" frameborder="0" style="width: 300px; height: 300px;"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <br>
+                            <span>speaker01 (yaw: 5&#176;, pitch: 15&#176;)</span>
+                        </div>
+                    </div>                 
+
+                    <!-- Row 2: Speaker 02 -->
+                    <div style="display: flex; justify-content: space-around; margin-bottom: 20px;">
+                        <div style="text-align: center;">
+                            <iframe src="speaker02_a0_e0.mp4" frameborder="0" style="width: 300px; height: 300px;"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <br>
+                            <span>speaker02 (raw video)</span>
+                        </div>
+                        <div style="text-align: center;">
+                            <iframe src="speaker02_a0_e-3.mp4" frameborder="0" style="width: 300px; height: 300px;"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <br>
+                            <span>speaker02 (yaw: 0&#176;, pitch: -3&#176;)</span>
+                        </div>
+                        <div style="text-align: center;">
+                            <iframe src="speaker02_a5_e3.mp4" frameborder="0" style="width: 300px; height: 300px;"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <br>
+                            <span>speaker02 (yaw: 5&#176;, pitch: 3&#176;)</span>
+                        </div>
+                    </div>
+                </div>
+
+
+            <pre class="w3-panel w3-leftbar w3-light-grey" style="white-space: pre-wrap; font-family: monospace; font-size: 12px">    
             @inproceedings{,
                 title={Enhanced Self-Supervised Multi-View Representations With Modality-Missing Robustness for Audio-Visual Speech Recognition},
                 author={},
-                booktitle={on},
+                booktitle={},
                 pages={},
                 year={}
-            }
-            
-                </pre>
+            }           
+            </pre>
             </div>
         </div>
         <br/>
